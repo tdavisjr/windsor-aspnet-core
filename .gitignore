@@ -1,0 +1,12 @@
+*.map
+*.user
+*.log
+.DS_Store
+.idea/
+.vscode/
+.vs/
+node_modules/
+jspm_packages/
+typings/
+bin/
+obj/
