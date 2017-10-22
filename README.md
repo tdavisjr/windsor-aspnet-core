@@ -1,6 +1,6 @@
 # Using Windsor DI Container with ASP.NET Core
 
-**_Note_:** ASP.Net Core framework is used; but instead of targeting .NET Core, the projects target .NET 4.6.2 Framework
+**_Note_:** ASP.Net Core framework is used; but instead of targeting .NET Core, the projects target **.NET 4.6.2 Framework**
 
 
 ## Dependencies
