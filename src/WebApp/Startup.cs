@@ -1,17 +1,17 @@
-using Castle.Facilities.WcfIntegration;
-using Castle.MicroKernel.Registration;
-using Castle.Windsor;
 using Castle.Windsor.MsDependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using Castle.Facilities.WcfIntegration;
+using Castle.MicroKernel.Registration;
+using Castle.Windsor;
 using WcfService.DataContract;
 
 namespace WebApp
 {
-    public class Startup
+	public class Startup
     {
         public Startup(IConfiguration configuration)
         {

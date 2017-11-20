@@ -13,3 +13,10 @@
 
 Castle WcfIntegrationFacility nuget package didn't support .NET Standard even though it was compiled to .NET 4.5. Confusing?
 Yes. Blame Microsoft for this; but over time this story will get better. When the nuget package is updated to support it, then the **WebApp** project can be updated to support .NET Core 2.0
+
+
+## After clone update submodules
+
+Please update your submodules before attempting to build.
+
+```git submodule update --init --recursive --remote```
