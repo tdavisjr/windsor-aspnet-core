@@ -1,0 +1,6 @@
+[submodule "modules/Windsor"]
+	path = modules/Windsor
+	url = https://github.com/fir3pho3nixx/Windsor.git
+[submodule "modules/castle-windsor-ms-adapter"]
+	path = modules/castle-windsor-ms-adapter
+	url = https://github.com/fir3pho3nixx/castle-windsor-ms-adapter.git
