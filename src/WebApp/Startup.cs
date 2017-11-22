@@ -4,10 +4,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using Castle.Facilities.WcfIntegration;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
-using WcfService.DataContract;
+using Company.Project.HelloClient;
 
 namespace WebApp
 {
@@ -26,13 +25,21 @@ namespace WebApp
             services.AddMvc();
 
             var container = new WindsorContainer();
-            container.AddFacility<WcfFacility>();
+            
+			// *** Replaced by connected service ***
+			
+			//container.AddFacility<WcfFacility>();
 
-            container.Register(
-                Component.For<IHelloService>()
-                         .AsWcfClient(WcfEndpoint.At("http://localhost:50214/HelloService.svc"))
-                         .LifestyleTransient()    
-            );
+            //container.Register(
+            //    Component.For<IHelloService>()
+            //             .AsWcfClient(WcfEndpoint.At("http://localhost:50214/HelloService.svc"))
+            //             .LifestyleTransient()    
+            //);
+
+			// *** Connected Service ***
+
+	        var helloServiceClient = new HelloServiceClient();
+	        container.Register(Component.For<HelloServiceClient>().Instance(helloServiceClient));
 
             return WindsorRegistrationHelper.CreateServiceProvider(container, services);
         }
